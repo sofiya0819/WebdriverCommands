@@ -25,33 +25,33 @@ public class Commands {
         driver.close();
     }
 
-//    @Test
-//    public void practice1() throws InterruptedException {
-//        String url = "https://www.google.com";
-//        driver.get(url);
-//        Thread.sleep(5000L);
-//
-//        //select google search field and enter data in it
-//        WebElement searchField = driver.findElement(By.name("q"));
-//        Thread.sleep(2000L);
-//        searchField.sendKeys("selenium");
-//        Thread.sleep(2000L);
-//        searchField.submit();
-//        Thread.sleep(5000L);
-//
-//        //find the link however it is not the first link !!!!
-//        String elementXPath = "//div[@class='yuRUbf']/a[@href = 'https://www.selenium.dev/']";
-//        WebElement element = driver.findElement(By.xpath(elementXPath));
-//        element.click();
-//        Thread.sleep(2000L);
-//
-//        //validate titles
-//        String title = "SeleniumHQ Browser Automation";
-//        String currentTitle = driver.getTitle();
-//        System.out.println("Title is "+title);
-//        Thread.sleep(2000L);
-//        Assert.assertEquals(title,currentTitle);
-//    }
+    @Test
+    public void practice1() throws InterruptedException {
+        String url = "https://www.google.com";
+        driver.get(url);
+        Thread.sleep(5000L);
+
+        //select google search field and enter data in it
+        WebElement searchField = driver.findElement(By.name("q"));
+        Thread.sleep(2000L);
+        searchField.sendKeys("selenium");
+        Thread.sleep(2000L);
+        searchField.submit();
+        Thread.sleep(5000L);
+
+        //find the link however it is not the first link !!!!
+        String elementXPath = "//div[@class='yuRUbf']/a[@href = 'https://www.selenium.dev/']";
+        WebElement element = driver.findElement(By.xpath(elementXPath));
+        element.click();
+        Thread.sleep(2000L);
+
+        //validate titles
+        String title = "SeleniumHQ Browser Automation";
+        String currentTitle = driver.getTitle();
+        System.out.println("Title is "+title);
+        Thread.sleep(2000L);
+        Assert.assertEquals(title,currentTitle);
+    }
 
 
     @Test
@@ -67,7 +67,7 @@ public class Commands {
         WebElement createEmail = driver.findElement(By.id("email_create"));
         String email1 = createEmail.getText();
         createEmail.click();
-        createEmail.sendKeys("sofi123@gmail.com");
+        createEmail.sendKeys("sof123@gmail.com");
         Thread.sleep(2000L);
         //clicks Create an account
         WebElement submitButton = driver.findElement(By.id("SubmitCreate"));
@@ -105,6 +105,7 @@ public class Commands {
         CheckButtons();
         //fill your address
         //-fill first name
+        //error ?????????????????????????????????????????????????????????
         // checkTheFirstName(customerFirstName);
         //-fill second name
         // checkTheLastName(customerLastName);
